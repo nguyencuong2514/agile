@@ -26,7 +26,7 @@ include "../views/admin/layout/header.php";
                                                     <input class="form-control" name="name"
                                                         placeholder="Nhập tên danh mục">
                                                     <?php if (isset($_SESSION['errors']['name'])) : ?>
-                                                    <p class="text-danger"><?= $_SESSION['errors']['name'] ?></p>
+                                                        <p class="text-danger"><?= $_SESSION['errors']['name'] ?></p>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -36,7 +36,7 @@ include "../views/admin/layout/header.php";
                                                 <div class="col-sm-9">
                                                     <input type="file" name="image" class="form-control">
                                                     <?php if (isset($_SESSION['errors']['image'])) : ?>
-                                                    <p class="text-danger"><?= $_SESSION['errors']['image'] ?></p>
+                                                        <p class="text-danger"><?= $_SESSION['errors']['image'] ?></p>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -51,7 +51,7 @@ include "../views/admin/layout/header.php";
                                                         <option value="Hidden">Hiện</option>
                                                     </select>
                                                     <?php if (isset($_SESSION['errors']['status'])) : ?>
-                                                    <p class="text-danger"><?= $_SESSION['errors']['status'] ?></p>
+                                                        <p class="text-danger"><?= $_SESSION['errors']['status'] ?></p>
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
@@ -62,7 +62,7 @@ include "../views/admin/layout/header.php";
                                                     <textarea class="form-control bg-light-subtle" name="description"
                                                         id="description" placeholder="Nhập mô tả"></textarea>
                                                     <?php if (isset($_SESSION['errors']['description'])) : ?>
-                                                    <p class="text-danger"><?= $_SESSION['errors']['description'] ?></p>
+                                                        <p class="text-danger"><?= $_SESSION['errors']['description'] ?></p>
                                                     <?php endif; ?>
                                                 </div>
 

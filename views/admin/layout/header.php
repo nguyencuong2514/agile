@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from themes.pixelstrap.com/fastkart/back-end/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 14:35:16 GMT -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +15,7 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="../public/admin/assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../public/admin/assets/images/favicon.png" type="image/x-icon">
-    <title>TechFusion - Dashboard</title>
+    <title>Royal - Dashboard</title>
 
     <!-- Google font-->
     <link
@@ -66,7 +67,7 @@
 </head>
 
 <body>
-<?php
+    <?php
     if (isset($_SESSION['error'])) {
         echo "<script type='text/javascript'>
         toastr.warning(\"{$_SESSION['error']}\")
@@ -84,7 +85,7 @@
         // Xóa session
         unset($_SESSION['success']);
     }
-?>
+    ?>
 
     <!-- tap on top start -->
     <div class="tap-top">
@@ -101,9 +102,9 @@
                     <ul class="nav-menus">
                         <li class="profile-nav onhover-dropdown pe-0 me-0">
                             <div class="media profile-media">
-                                <img class="user-profile rounded-circle" src="./images/user/<?=($_SESSION['user']['avatar']) ?>" alt="">
+                                <img class="user-profile rounded-circle" src="./images/user/<?= ($_SESSION['user']['avatar']) ?>" alt="">
                                 <div class="user-name-hide media-body">
-                                    <span><?=$_SESSION['user']['name'] ?></span>
+                                    <span><?= $_SESSION['user']['name'] ?></span>
                                     <p class="mb-0 font-roboto">Admin<i class="middle ri-arrow-down-s-line"></i></p>
                                 </div>
                             </div>
@@ -131,7 +132,7 @@
                 <div>
                     <div class="logo-wrapper logo-wrapper-center">
                         <a href="index.html" data-bs-original-title="" title="">
-                            <h2 class="text-light">TechFusion</h2>
+                            <h2 class="text-light">Royal</h2>
                         </a>
                         <div class="back-btn">
                             <i class="fa fa-angle-left"></i>
@@ -235,9 +236,9 @@
                                         </li>
                                     </ul>
                                 </li>
-                        <div class="right-arrow" id="right-arrow">
-                            <i data-fe  ather="arrow-right"></i>
-                        </div>
+                                <div class="right-arrow" id="right-arrow">
+                                    <i data-fe ather="arrow-right"></i>
+                                </div>
                     </nav>
                 </div>
             </div>

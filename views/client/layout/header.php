@@ -1,10 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <?php
 $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
 <!-- Mirrored from swiftcart-html.vercel.app/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:44:23 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,7 +51,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
 </head>
 
 <body>
-<?php
+    <?php
     if (isset($_SESSION['error'])) {
         echo "<script type='text/javascript'>
         toastr.warning(\"{$_SESSION['error']}\")
@@ -68,7 +69,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
         // Xóa session
         unset($_SESSION['success']);
     }
-?>
+    ?>
     <div class="xc-preloader">
         <div class="xc-preloader__image">
             <img src="../public/client/assets/img/preloader/preloader.png" alt="preloader">
@@ -76,7 +77,7 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
     </div>
 
     <!-- /.preloader -->
-   
+
     <div class="xc-page-wrapper">
 
         <header>
@@ -84,18 +85,16 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
                 <div class="container">
                     <div class="xc-header-one__wrapper">
                         <div class="xc-header-one__logo">
-                            <a href="index.php?act=index"><h3 class="text-light">TechFusion</h3></a>
+                            <a href="index.php?act=index">
+                                <h3 class="text-light">Royal</h3>
+                            </a>
                         </div>
                         <div class="xc-header-one__right">
                             <div class="xc-header-one__search d-none d-xl-block">
-                            <form action="index.php?act=searchresult" method="post">
-                                <input type="search" placeholder="Tìm kiếm tại đây..." name="keyword" required>
-                                <button type="submit" name="search">Tìm kiếm</button>
-                            </form>
-
-
-
-
+                                <form action="index.php?act=searchresult" method="post">
+                                    <input type="search" placeholder="Tìm kiếm tại đây..." name="keyword" required>
+                                    <button type="submit" name="search">Tìm kiếm</button>
+                                </form>
 
                             </div>
                             <div class="xc-header-one__btns d-none d-lg-flex">
@@ -106,20 +105,20 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
                                 <!-- <a href="index.php?act=login" class="xc-header-one__btn">
                                     <i class="icon-user"></i>Đăng nhập
                                 </a> -->
-                                <!-- <?php if($role==0){ ?>
+                                <!-- <?php if ($role == 0) { ?>
                                 <a href="index.php?act=admin" class="xc-header-one__btn">
                                     <i class="icon-user"></i>Admin
                                 </a>
                                 <?php } ?> -->
 
-                                <?php if(!isset($_SESSION['user'])): ?>
-                                <a href="index.php?act=login" class="xc-header-one__btn">
-                                    <i class="icon-user"></i>Đăng nhập
-                                </a>
+                                <?php if (!isset($_SESSION['user'])): ?>
+                                    <a href="index.php?act=login" class="xc-header-one__btn">
+                                        <i class="icon-user"></i>Đăng nhập
+                                    </a>
                                 <?php else: ?>
                                     <a href="index.php?act=profile" class="xc-header-one__btn">
-                                    <i class="icon-user"></i>
-                                    <span>Xin chào <?=$_SESSION['user']['name']?></span>
+                                        <i class="icon-user"></i>
+                                        <span>Xin chào <?= $_SESSION['user']['name'] ?></span>
                                     </a>
                                 <?php endif; ?>
                                 <!-- mobile drawer  -->
@@ -193,5 +192,5 @@ $role = isset($_SESSION['role']) ? $_SESSION['role'] : null; ?>
                     </div>
                 </div>
             </div>
-           
+
         </header>

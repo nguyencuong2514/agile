@@ -35,7 +35,7 @@ class OrderController
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["submitCheckout"])) {
             $carts = $this->cart->getAllCart();
             $coupon_id = '';
-            isset($_POST['coupon_id']) ? $coupon_id =$_POST['coupon_id'] : $coupon_id = '5';
+            isset($_POST['coupon_id']) ? $coupon_id = $_POST['coupon_id'] : $coupon_id = '5';
 
             $errors = [];
 
@@ -95,7 +95,7 @@ class OrderController
                     header("Location: ?act=checkout");
                     exit;
                 }
-            }else{
+            } else {
                 $_SESSION['error'] = "Vui lòng nhập đủ các trường";
                 header('location:?act=checkout');
                 exit;
@@ -103,17 +103,18 @@ class OrderController
         }
     }
 
-    public function listOrderUser(){
+    public function listOrderUser()
+    {
         $listOrder = $this->order->getOrderDetailByIdUser();
         // echo '<pre>';
         // var_dump($listOrder);
         // echo '</pre>';
 
         include "../views/client/profile/listOrderUser.php";
-
     }
 
-    public function trackOrder(){
+    public function trackOrder()
+    {
         $getOrderDetail = $this->order->getOrderDetailById();
         $getOrder = $this->order->getOrderById();
         $getCoupon = $this->order->getCouponById();
@@ -124,8 +125,6 @@ class OrderController
         // var_dump($getOrderDetail);
         // echo '</pre>';
         include "../views/client/trackOrder/trackOrder.php";
-
-
     }
 
     public function handleCoupon($coupon, $total)
@@ -144,7 +143,7 @@ class OrderController
         try {
             $this->order->cancle();
             $_SESSION['success'] = 'Hủy đơn hàng thành công';
-            header('Location: ?act=list-user-order' );
+            header('Location: ?act=list-user-order');
             exit();
         } catch (\Throwable $th) {
             $_SESSION['error'] = 'Hủy đơn hàng thất bại';
